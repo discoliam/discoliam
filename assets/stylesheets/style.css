@@ -20,11 +20,9 @@ body{
 a{color: #ff6c00;text-decoration: none;}
 a:hover{color: #000;}
 
-h1, h2, h3, h4, h5, .projects li a{
+h1, h2, h3, h4, h5, .projects li a, nav.social a{
   font-family: 'JeanLucWeb-Thin', Arial, "Helvetica Neue", Helvetica, sans-serif;
   text-transform: uppercase;
-  display: block;
-  clear: both;
 }
 
 /* -------------- =HEADER-------------- */
@@ -82,7 +80,7 @@ h2{font-size: 38px}
   
 }
 
-/* -------------- =CONTACT-------------- */
+/* -------------- =GENERAL-------------- */
 nav.social a, form, .vcard{
   display: block;
   float: left;
@@ -92,6 +90,7 @@ nav.social a, form, .vcard{
   background-color: red;
 }
 
+/* -------------- =VCARD-------------- */
 .vcard{
   background: #8a6eaf;
 }
@@ -101,11 +100,11 @@ nav.social a, form, .vcard{
   color: #000;
   font-size: 18px;
   font-weight: bold;
-  padding: 0;
+  padding: 0 5%;
   marign: 0;
 }
 
-.vcard p.fn{margin: 0 0 10%;}
+.vcard p.fn{margin: 10px 0 9%;}
 
 .vcard p.deets a,
 .vcard p.deets span{
@@ -114,6 +113,54 @@ nav.social a, form, .vcard{
 
 .vcard p a{color: #f4f5ec;}
 .vcard p a:hover{color: #000;}
+
+/* -------------- =FORM-------------- */
+form {
+  background: #fff;
+}
+
+form p{
+  display: block;
+  padding: 0 5%;
+}
+
+form p label{
+  float: left;
+  width: 20%;
+}
+
+form p input,
+form p textarea{
+  float: left;
+  margin: 0 0 0 10%;
+  width: 50%;
+}
+
+
+/* -------------- =LINK-------------- */
+nav.social a{
+  color: #f4f5ec;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 38px;
+  position: relative;
+}
+
+nav.social a span{
+  position: absolute;
+  top: 50%;
+  margin-top: -19px;
+}
+
+nav.social a.facebook {background: #3B5998;}
+nav.social a.twitter {background: #00A0D1;}
+nav.social a.flickr {background: #fff;}
+nav.social a.lastfm {background: #D51007;}
+nav.social a.github {background: #FAFAFA;}
+
+
+
+
 
 /* ------------- =IMAGE REPLACEMENT  --------------- */
 h1.site-title{
@@ -130,6 +177,17 @@ h1.site-title{
   background: url(/assets//images/logo.gif) no-repeat 0 0; 
 }
 
+
+/* -------------- =CLEARFIX -------------- */
+
+form p:after,
+form:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
 
 
 /* ------------- =LARGE SIZES --------------- */
