@@ -1,0 +1,170 @@
+/* -------------- =STYLE -------------- */
+.hidden{display:none}
+/* -------------- =@FONT FACE -------------- */
+@font-face {
+  font-family: 'JeanLucWeb-Thin';
+  src: url('/assets/fonts/jeanlucweb-bold.eot');
+  src: local('☺'), url("/assets/fonts/jeanlucweb-thin.woff") format("woff"),
+                   url("/assets/fonts/jeanlucweb-thin.otf") format("opentype"),
+                   url("/assets/fonts/jeanlucweb-thin#webfontdsa4toug") format("svg");
+}
+
+/* -------------- =BODY-------------- */
+body{
+  color: #000;
+  background: url(/assets/images/bg.jpg) no-repeat top right #f4f5ec;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  
+}
+
+a{color: #ff6c00;text-decoration: none;}
+a:hover{color: #000;}
+
+h1, h2, h3, h4, h5, .projects li a{
+  font-family: 'JeanLucWeb-Thin', Arial, "Helvetica Neue", Helvetica, sans-serif;
+  text-transform: uppercase;
+  display: block;
+  clear: both;
+}
+
+/* -------------- =HEADER-------------- */
+
+h1.site-title{
+  position: absolute;
+  top: -12px;
+  left: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.bio{
+  font-size: 12px;
+  font-weight:bold;
+  padding: 38px 0 0 0;
+}
+
+/* -------------- =CONTENT-------------- */
+.content {
+  margin: 0 auto;
+  width: 80%;
+  max-width: 1000px;
+}
+
+#main-content {
+  position: relative;
+}
+
+h2{font-size: 38px}
+
+/* -------------- =PROJECTS-------------- */
+.projects{
+  padding:0;
+  marign:0;
+}
+
+.projects li{
+  display: block;
+  float: left;
+  width: 90%;
+  height: 130px;
+  margin: 0 5% 10%;
+  background-color: red;
+}
+
+.projects li a{
+  display: tabel-cell;
+  text-align: center;
+  color: #f4f5ec;
+}
+
+.projects li a span{
+  vertical-align: center;
+  
+}
+
+/* -------------- =CONTACT-------------- */
+nav.social a, form, .vcard{
+  display: block;
+  float: left;
+  width: 90%;
+  height: 130px;
+  margin: 0 5% 10%;
+  background-color: red;
+}
+
+.vcard{
+  background: #8a6eaf;
+}
+
+.vcard p{
+  display: block;
+  color: #000;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 0;
+  marign: 0;
+}
+
+.vcard p.fn{margin: 0 0 10%;}
+
+.vcard p.deets a,
+.vcard p.deets span{
+  display: block;
+}
+
+.vcard p a{color: #f4f5ec;}
+.vcard p a:hover{color: #000;}
+
+/* ------------- =IMAGE REPLACEMENT  --------------- */
+h1.site-title{
+  overflow: hidden;
+  text-align: left;
+  display: block;
+  line-height:0;
+  text-indent: -1000em;
+}
+
+h1.site-title{
+  width: 185px;
+  height: 32px;
+  background: url(/assets//images/logo.gif) no-repeat 0 0; 
+}
+
+
+
+/* ------------- =LARGE SIZES --------------- */
+
+/* 480 =================================================== */
+@media only screen and (min-width: 480px) {
+  .projects li, nav.social a{width: 40%;}
+  form, .vcard{width: 90%;}
+  nav{display: block;clear: both}
+}
+
+/* 600 =================================================== */
+@media only screen and (min-width: 600px) {
+}
+
+/* 768 =================================================== */
+@media only screen and (min-width: 768px) {
+  .projects li, nav.social a{
+    width: 29.33%;
+    margin: 0 2% 4%;
+  }
+  form, .vcard{width: 46%;margin: 0 2% 4%;}
+  
+  form, {float: left;}
+  .vcard{float: right;}
+  
+  
+  
+  p.bio{width: 50%}
+}
+
+/* 992 =================================================== */
+@media only screen and (min-width: 992px) {
+  .projects li, nav.social a{
+    width: 21%;
+    margin: 0 2% 4%;
+  }
+}
