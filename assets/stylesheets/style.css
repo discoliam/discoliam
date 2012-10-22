@@ -150,6 +150,7 @@ nav.social a span{
   position: absolute;
   top: 50%;
   margin-top: -19px;
+  color: #000;
 }
 
 nav.social a.facebook {background: #3B5998 url(/assets/images/facebook-logo.png) right center no-repeat;}
