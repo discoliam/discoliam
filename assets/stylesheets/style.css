@@ -157,7 +157,7 @@ nav.social a.facebook {background: #3B5998 url(/assets/images/facebook-logo.png)
 nav.social a.twitter {background: #00A0D1 url(/assets/images/twitter-logo.png) right center no-repeat;}
 nav.social a.flickr {background: #fff url(/assets/images/flickr-logo.png) center center no-repeat;background-size: cover;color: black;}
 nav.social a.lastfm {background: #D51007;}
-nav.social a.github {background: #ddd url(https://a248.e.akamai.net/assets.github.com/images/modules/footer/blacktocat.svg?66e4f85d) no-repeat right center;color:black;   }
+nav.social a.github {background: #ddd url(/assets/images/github-logo.png) no-repeat right center;color:black;   }
 
 
 
@@ -175,7 +175,7 @@ h1.site-title{
 h1.site-title{
   width: 185px;
   height: 32px;
-  background: url(/assets//images/logo.gif) no-repeat 0 0; 
+  background: url(/assets/images/logo.gif) no-repeat 0 0; 
 }
 
 
@@ -210,33 +210,65 @@ ul:after {
 
 /* 768 =================================================== */
 @media only screen and (min-width: 768px) {
-  .projects li, nav.social a{
+  .projects li, nav.social a {
     width: 32%;
     margin: 0 2% 2% 0 !important;
   }
     
   form, .vcard{width: 46%;margin: 0 2% 2% 0;}
   
-/*  .projects li:nth-child(3n), nav.social a:nth-child(3n), .vcard{margin-right: 0 !important;}
-*/  
+  .projects li:nth-child(3n), nav.social a:nth-child(3n), .vcard{margin-right: 0 !important;}
+  
   form, {float: left;}
   .vcard{float: right;}
 
   p.bio{width: 32%}
+  
+  
+  /* ------------- =IMAGE REPLACEMENT  --------------- */
+  h2{
+    overflow: hidden;
+    text-align: left;
+    display: block;
+    line-height:0;
+    text-indent: -1000em;
+  }
+
+  h2.projects-title{
+    width: 391px;
+    height: 276px;
+    background: url(/assets/images/projects-title.png) no-repeat 0 0; 
+  }
+  
+  h2.contact-title{
+    width: 460px;
+    height: 283px;
+    background: url(/assets/images/contact-title.gif) no-repeat 0 0; 
+  }
+  
+  h2{
+    float: right;
+    width: 49% !important;
+  }
+  
+  h2.contact-title {float: left;}
+  
+  
 }
 
 /* 992 =================================================== */
 @media only screen and (min-width: 992px) {
-  .projects li{
+  .projects li {
     width: 15%;
     margin: 0 2% 2% 0 !important;
   }
   
-  nav.social a{
+  nav.social a {
     width: 23.5%;
     margin: 0 2% 2% 0 !important;
   }
   
+  .projects li:nth-child(3n), nav.social a:nth-child(3n), .vcard{margin-right: 2% !important;}
   .projects li:nth-child(6n), nav.social a:nth-child(4n), .vcard{margin-right: 0 !important;}
   
 }
