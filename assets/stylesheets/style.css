@@ -116,26 +116,54 @@ nav.social a, form, .vcard{
 
 /* -------------- =FORM-------------- */
 form {
-  background: #fff;
+  background: url(/assets/images/contact-bg.gif) no-repeat 0 0 #fff;
+  height: 309px;
 }
 
 form p{
   display: block;
   padding: 0 5%;
+  margin: 0;
 }
 
 form p label{
   float: left;
   width: 20%;
+  font-size: 10px;
+  font-weight: bold;
+  position: relative;
+  top: 11px;
 }
 
 form p input,
 form p textarea{
   float: left;
   margin: 0 0 0 10%;
-  width: 50%;
+  width: 60%;
+  background: transparent;
+  border: 0;
+  height: 30px;
 }
 
+
+form p textarea {padding: 8px 0;}
+
+form input[type="submit"] {
+  width: 80px;
+  height: 31px;
+  background: url(/assets/images/contact-submit.gif) no-repeat 0 0;
+  border: 0;
+  text-align: right;
+  font-size: 0px;
+  color: #19e3bd;
+  margin: 20px 32%;
+}
+
+form input[type="submit"]:hover {
+  background-position: 0 -31px;
+  color: #8a6eaf;
+  cursor: hover;
+}
 
 /* -------------- =LINK-------------- */
 nav.social a{
@@ -214,9 +242,9 @@ form:after {
   form, {float: left;}
   .vcard{float: right;}
   
-  
-  
   p.bio{width: 50%}
+  
+
 }
 
 /* 992 =================================================== */
@@ -225,4 +253,26 @@ form:after {
     width: 21%;
     margin: 0 2% 4%;
   }
+  
+  h2{
+    overflow: hidden;
+    text-align: left;
+    display: block;
+    line-height:0;
+    text-indent: -1000em;
+  }
+
+  h2.contact-title{
+    width: 460px;
+    height: 283px;
+    background: url(/assets/images/contact-title.gif) no-repeat 0 0; 
+  }
+  
+  h2.projects-title{
+    float:left;
+    width: 391px;
+    height: 276px;
+    background: url(/assets/images/projects-title.png) no-repeat 0 0; 
+  }
+  
 }
