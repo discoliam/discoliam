@@ -14,7 +14,6 @@ body{
   color: #000;
   background: url(/assets/images/bg.jpg) no-repeat top right #f4f5ec;
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-  
 }
 
 a{color: #ff6c00;text-decoration: none;}
@@ -29,8 +28,8 @@ h1, h2, h3, h4, h5, .projects li a, nav.social a{
 
 h1.site-title{
   position: absolute;
-  top: -12px;
-  left: 0;
+  left: 5%;
+  top: 0;
   margin: 0;
   padding: 0;
 }
@@ -64,30 +63,47 @@ h2{font-size: 38px}
   display: block;
   float: left;
   width: 100%;
-  height: 130px;
+  height: 100%x;
   margin: 0 0 5% 0;
-  background-color: red;
+  padding:0;
 }
 
 .projects li a{
-  display: tabel-cell;
-  text-align: center;
+  display: block;
   color: #f4f5ec;
+  position: relative;
+  padding:0;
+  margin: 0;
+  font-size: 20px
+}
+
+.projects li a img {
+  width: 100%;
+  padding:0;
+  margin: 0;
 }
 
 .projects li a span{
-  vertical-align: center;
-  
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 90%;
+  padding:5%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.projects li a:hover span {
+  background: #f06600;
 }
 
 /* -------------- =GENERAL-------------- */
-nav.social a, form, .vcard{
+nav.social a, .vcard{
   display: block;
   float: left;
   width: 100%;
   height: 130px;
   margin: 0 0 5% 0;
-  background-color: red;
 }
 
 /* -------------- =VCARD-------------- */
@@ -112,30 +128,7 @@ nav.social a, form, .vcard{
 }
 
 .vcard p a{color: #f4f5ec;}
-.vcard p a:hover{color: #000;}
-
-/* -------------- =FORM-------------- */
-form {
-  background: #fff;
-}
-
-form p{
-  display: block;
-  padding: 0 2%;
-}
-
-form p label{
-  float: left;
-  width: 20%;
-}
-
-form p input,
-form p textarea{
-  float: left;
-  margin: 0 0 0 10%;
-  width: 50%;
-}
-
+.vcard p a:hover{color: #19e3bd;}
 
 /* -------------- =LINK-------------- */
 nav.social a{
@@ -144,6 +137,7 @@ nav.social a{
   vertical-align: middle;
   font-size: 38px;
   position: relative;
+  height: 40px
 }
 
 nav.social a span{
@@ -151,6 +145,7 @@ nav.social a span{
   top: 50%;
   margin-top: -19px;
   color: #000;
+  right: 10%;
 }
 
 nav.social a.facebook {background: #3B5998 url(/assets/images/facebook-logo.png) right center no-repeat;}
@@ -159,7 +154,11 @@ nav.social a.flickr {background: #fff url(/assets/images/flickr-logo.png) center
 nav.social a.lastfm {background: #D51007;}
 nav.social a.github {background: #ddd url(/assets/images/github-logo.png) no-repeat right center;color:black;   }
 
-
+nav.social a.facebook:hover {background:#f06600;}
+nav.social a.twitter:hover {background:#f06600;}
+nav.social a.flickr:hover {background:#f06600;}
+nav.social a.lastfm:hover {background:#f06600;}
+nav.social a.github:hover {background:#f06600;}
 
 
 
@@ -205,6 +204,7 @@ ul:after {
   
   form, .vcard{width: 100%;}
   nav{display: block;clear: both}
+
 }
 
 
@@ -214,16 +214,25 @@ ul:after {
     width: 32%;
     margin: 0 2% 2% 0 !important;
   }
-    
-  form, .vcard{width: 46%;margin: 0 2% 2% 0;}
-  
-  .projects li:nth-child(3n), nav.social a:nth-child(3n), .vcard{margin-right: 0 !important;}
-  
-  form, {float: left;}
-  .vcard{float: right;}
 
-  p.bio{width: 32%}
+    
+  .vcard {
+    width: 70%;
+    margin: 20px 15%;
+  }
   
+  .projects li:nth-child(3n), nav.social a:nth-child(2n){margin-right: 0 !important;}
+  
+  p.bio{width: 70%}
+
+  h2.projects-title{float: right;}
+  h2.contact-title {margin: 0 auto;}
+
+   nav.social a{
+    width: 48%;
+    height:80px;
+  }
+
   
   /* ------------- =IMAGE REPLACEMENT  --------------- */
   h2{
@@ -246,29 +255,34 @@ ul:after {
     background: url(/assets/images/contact-title.gif) no-repeat 0 0; 
   }
   
-  h2{
-    float: right;
-    width: 49% !important;
-  }
-  
-  h2.contact-title {float: left;}
-  
-  
 }
 
 /* 992 =================================================== */
 @media only screen and (min-width: 992px) {
   .projects li {
-    width: 15%;
+    width: 25%;
     margin: 0 2% 2% 0 !important;
   }
-  
-  nav.social a {
-    width: 23.5%;
-    margin: 0 2% 2% 0 !important;
+
+  h2.contact-title{
+    float: left;
+    margin-bottom: 40px
   }
-  
-  .projects li:nth-child(3n), nav.social a:nth-child(3n), .vcard{margin-right: 2% !important;}
-  .projects li:nth-child(6n), nav.social a:nth-child(4n), .vcard{margin-right: 0 !important;}
+
+  .vcard{
+    float:right;
+    width: 45%;
+    margin: 40px 0;
+  }
+
+  nav.social a{
+    width: 32%;
+    height:80px;
+  }
+
+  nav.social a:nth-child(2n){margin-right: 2% !important;}
+  nav.social a:nth-child(3n){margin-right: 0 !important;}
+
+
   
 }
