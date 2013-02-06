@@ -14,13 +14,12 @@ body{
   color: #000;
   background: url(/assets/images/bg.jpg) no-repeat top right #f4f5ec;
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-  
 }
 
 a{color: #ff6c00;text-decoration: none;}
 a:hover{color: #000;}
 
-h1, h2, h3, h4, h5, .projects li a, nav.social a{
+h1, h2, h3, h4, h5, .projects li a{
   font-family: 'JeanLucWeb-Thin', Arial, "Helvetica Neue", Helvetica, sans-serif;
   text-transform: uppercase;
 }
@@ -29,13 +28,13 @@ h1, h2, h3, h4, h5, .projects li a, nav.social a{
 
 h1.site-title{
   position: absolute;
-  top: -12px;
-  left: 0;
+  left: 5%;
+  top: 0;
   margin: 0;
   padding: 0;
 }
 
-.bio{
+.bio, footer{
   font-size: 12px;
   font-weight:bold;
   padding: 38px 0 0 0;
@@ -52,7 +51,8 @@ h1.site-title{
   position: relative;
 }
 
-h2{font-size: 38px}
+h2{font-size: 38px;}
+h2 img{display:none;}
 
 /* -------------- =PROJECTS-------------- */
 .projects{
@@ -64,30 +64,55 @@ h2{font-size: 38px}
   display: block;
   float: left;
   width: 100%;
-  height: 130px;
+  height: 100%x;
   margin: 0 0 5% 0;
-  background-color: red;
+  padding:0;
 }
 
 .projects li a{
-  display: tabel-cell;
-  text-align: center;
+  display: block;
   color: #f4f5ec;
+  position: relative;
+  padding:0;
+  margin: 0;
+  font-size: 20px
+}
+
+.projects li a img {
+  width: 100%;
+  padding:0;
+  margin: 0;
 }
 
 .projects li a span{
-  vertical-align: center;
-  
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 90%;
+  padding:5%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.projects li a:hover span {
+  background: #f06600;
 }
 
 /* -------------- =GENERAL-------------- */
-nav.social a, form, .vcard{
+.vcard{
   display: block;
   float: left;
   width: 100%;
   height: 130px;
   margin: 0 0 5% 0;
-  background-color: red;
+}
+
+nav.social a {
+  float:left;
+  width: 32px;
+  height: 32px;
+  display: block;
+  margin: 0 10px 0 0;
 }
 
 /* -------------- =VCARD-------------- */
@@ -112,39 +137,7 @@ nav.social a, form, .vcard{
 }
 
 .vcard p a{color: #f4f5ec;}
-.vcard p a:hover{color: #000;}
-
-/* -------------- =FORM-------------- */
-form {
-  background: url(/assets/images/contact-bg.gif) no-repeat 0 0 #fff;
-  height: 309px;
-}
-
-form p{
-  display: block;
-  padding: 0 5%;
-  margin: 0;
-}
-
-form p label{
-  float: left;
-  width: 20%;
-  font-size: 10px;
-  font-weight: bold;
-  position: relative;
-  top: 11px;
-}
-
-form p input,
-form p textarea{
-  float: left;
-  margin: 0 0 0 10%;
-  width: 60%;
-  background: transparent;
-  border: 0;
-  height: 30px;
-}
-
+.vcard p a:hover{color: #19e3bd;}
 
 form p textarea {padding: 8px 0;}
 
@@ -167,29 +160,27 @@ form input[type="submit"]:hover {
 
 /* -------------- =LINK-------------- */
 nav.social a{
-  color: #f4f5ec;
-  text-align: center;
-  vertical-align: middle;
-  font-size: 38px;
-  position: relative;
+ overflow:hidden;
+ text-align:left;
+ display:block;
+ line-height:0;
+ text-indent:-1000em
 }
 
-nav.social a span{
-  position: absolute;
-  top: 50%;
-  margin-top: -19px;
-  color: #000;
+nav.social a.facebook {background: url(/assets/images/facebook-32x32.png) right center no-repeat;}
+nav.social a.twitter {background: url(/assets/images/twitter-32x32.png) right center no-repeat;}
+nav.social a.flickr {background: url(/assets/images/flickr-32x32.png) center center no-repeat;background-size: cover;color: black;}
+nav.social a.lastfm {background: url(/assets/images/lastfm-32x32.png);}
+nav.social a.github {background: url(/assets/images/github-32x32.png) no-repeat right center;color:black;   }
+nav.social a.linked-in {background: url(/assets/images/linkedin-32x32.png) no-repeat right center;color:black;   }
+nav.social a.instagram {background: url(/assets/images/instagram-32x32.png) no-repeat right center;color:black;   }
+nav.social a.lanyrd {background: url(/assets/images/lanyrd-32x32.png) no-repeat right center;color:black;   }
+
+/* -------------- =FOOTER-------------- */
+footer{
+  padding: 20px 0;
+  display: block;
 }
-
-nav.social a.facebook {background: #3B5998 url(/assets/images/facebook-logo.png) right center no-repeat;}
-nav.social a.twitter {background: #00A0D1 url(/assets/images/twitter-logo.png) right center no-repeat;}
-nav.social a.flickr {background: #fff url(/assets/images/flickr-logo.png) center center no-repeat;background-size: cover;color: black;}
-nav.social a.lastfm {background: #D51007;}
-nav.social a.github {background: #ddd url(/assets/images/github-logo.png) no-repeat right center;color:black;   }
-
-
-
-
 
 /* ------------- =IMAGE REPLACEMENT  --------------- */
 h1.site-title{
@@ -209,9 +200,7 @@ h1.site-title{
 
 /* -------------- =CLEARFIX -------------- */
 
-form p:after,
-form:after,
-ul:after {
+ul:after, nav:after {
   content: ".";
   display: block;
   height: 0;
@@ -224,79 +213,65 @@ ul:after {
 
 /* 480 =================================================== */
 @media only screen and (min-width: 480px) {
-  .projects li, nav.social a{
+  .projects li{
     width: 49%;
     margin: 0 2% 2% 0;
   }
   
-  .projects li:nth-child(2n), nav.social a:nth-child(2n){margin-right: 0;}
+  .projects li:nth-child(2n+2){margin-right: 0;}
   
   form, .vcard{width: 100%;}
   nav{display: block;clear: both}
+
 }
 
 
 /* 768 =================================================== */
 @media only screen and (min-width: 768px) {
-  .projects li, nav.social a {
+  .projects li {
     width: 32%;
     margin: 0 2% 2% 0 !important;
   }
+
     
-  form, .vcard{width: 46%;margin: 0 2% 2% 0;}
+  .vcard {
+    width: 70%;
+    margin: 20px 15%;
+  }
   
-  .projects li:nth-child(3n), nav.social a:nth-child(3n), .vcard{margin-right: 0 !important;}
   
-  form, {float: left;}
-  .vcard{float: right;}
+  p.bio{width: 70%}
+
+  h2.projects-title{float: right;}
+  h2.contact-title {margin: 0 auto;}
 
   p.bio{width: 50%}
-  
-
 
   /* ------------- =IMAGE REPLACEMENT  --------------- */
-  h2{
-    overflow: hidden;
-    text-align: left;
-    display: block;
-    line-height:0;
-    text-indent: -1000em;
-  }
-
-  h2.projects-title{
-    width: 391px;
-    height: 276px;
-    background: url(/assets/images/projects-title.png) no-repeat 0 0; 
-  }
-  
-  h2.contact-title{
-    width: 460px;
-    height: 283px;
-    background: url(/assets/images/contact-title.gif) no-repeat 0 0; 
-  }
-  
-  h2{
-    float: right;
-    width: 49% !important;
-  }
+  h2{width: 32%;}
+  h2 span {display:none;}
+  h2 img{width: 100%;display:block;}
+    h2{float: right;}
   
   h2.contact-title {float: left;}
   
-  }
+}
 
 /* 992 =================================================== */
 @media only screen and (min-width: 992px) {
   .projects li {
-    width: 15%;
+    width: 25%;
     margin: 0 2% 2% 0 !important;
   }
-  
-  nav.social a {
-    width: 23.5%;
-    margin: 0 2% 2% 0 !important;
+
+  h2.contact-title{
+    float: left;
+    margin-bottom: 40px
   }
-  
-  .projects li:nth-child(3n), nav.social a:nth-child(3n), .vcard{margin-right: 2% !important;}
-  .projects li:nth-child(6n), nav.social a:nth-child(4n), .vcard{margin-right: 0 !important;}
-  
+
+  .vcard{
+    float:right;
+    width: 45%;
+    margin: 40px 0;
+  }
 }
