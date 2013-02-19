@@ -1,0 +1,63 @@
+/* Media Queries */
+/* Media queries for responsive design breakpooints */
+
+// Print
+// ------------------------------------------------------------
+
+@media print {}
+
+/* 480 =================================================== */
+@media only screen and (min-width: 480px) {
+  
+  .projects li{
+    width: 46.2%;
+    margin: 2.5% 2.5% 2.5% 2.5%;
+  }
+  
+  .projects li:nth-child(2n+2){margin-right: 0;}
+  
+ .projects li a span.info{bottom: 1.5%;}
+
+}
+
+
+/* 768 =================================================== */
+@media only screen and (min-width: 768px) {
+
+  p.bio{width: 50%}
+
+  .projects li {
+    width: 30%;
+    margin: 2% 2% 2% 2% !important;
+    left: -2%;
+  }
+
+  .projects li:nth-child(2n+2){margin-right: 2%;}
+
+
+  h2.projects-title{float: right;}
+  h2.contact-title {float: left;margin-top: 5%;} 
+
+  .vcard {
+    width: 55%;
+    float: right;
+    margin-top: 5%;
+  }
+
+  .projects li a span.info{bottom: 2%;}
+
+  footer{width: 75%;}
+
+  /* ------------- =IMAGE REPLACEMENT  --------------- */
+  h2{width: 32%;float: right;}
+  h2 span {display:none;}
+  h2 img{width: 100%;display:block;}
+  
+}
+
+/* 992 =================================================== */
+@media only screen and (min-width: 992px) {
+ .projects li a span.info{bottom: 1.5%;}
+  footer{width: 50%;}
+}
+
