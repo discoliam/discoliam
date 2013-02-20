@@ -50,7 +50,7 @@ h1.site-title{
 #main-content {position: relative;}
 
 h2{
-  margin: 0 0 2% 0;
+  margin: 0 0 0 0;
   img{display:none;}
 }
 
@@ -70,7 +70,6 @@ h2{
     a{
       display: block;
       color: $background;
-      position: relative;
       padding:0;
       margin: 0;
       font-size: 20px
@@ -79,11 +78,7 @@ h2{
 }
 
 .projects li a{
-  img {
-    width: 100%;
-    padding:0;
-    margin: 0;
-  }
+  img {width: 100%;}
   span {
     position: absolute;
     left: 0;
@@ -94,22 +89,35 @@ h2{
     &.title{top: 0;}
     &.info{bottom: 1%;}
   }
-  &:hover span {background: $main;}
+  &:hover span.title {background: $main-transparent;}
+}
+
+/* -------------- =CLIENTS-------------- */
+.clients{
+  ul {
+    padding: 0;
+    margin: 0;
+    li{
+      list-style-type: none;
+      float: left;
+      padding: 0;
+      margin: 0 0 2% 2%;
+      &:first-child{margin-left:0;}
+    }
+  }
 }
 
 /* -------------- =VCARD-------------- */
 .vcard{
   display: block;
   float: left;
-  width: 92%;
-  margin: 0 0 5% 0;
-  padding: 4%;
+  width: 90%;
+  margin: 2.5% 0;
+  padding: 5%;
   background: $contact;
   p{
     display: block;
     color: $dark;
-    font-size: 18px;
-    font-weight: bold;
     padding: 0;
     margin: 0;
     &.fn{margin-bottom: 4%;}
@@ -117,7 +125,7 @@ h2{
       margin-bottom: 4%;
       a, span {display: block;}
     }
-    a{color: $background;&:hover{color: #19e3bd;}}
+    a{color: $background;&:hover{color: darken($contrast, 10%);}}
   }
 }
 

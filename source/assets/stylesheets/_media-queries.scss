@@ -16,7 +16,7 @@
   
   .projects li:nth-child(2n+2){margin-right: 0;}
   
- .projects li a span.info{bottom: 1.5%;}
+  .projects li a span.info{bottom: 1.5%;}
 
 }
 
@@ -47,6 +47,18 @@
   .projects li a span.info{bottom: 2%;}
 
   footer{width: 75%;}
+
+  .clients{
+    float: right;
+    width: 32%;
+    margin-top: -40%;
+    h3{margin-bottom: 8%;}
+    ul li{
+      margin: 0 0 8% 0;
+      width: 100%;
+      text-align: center;
+    }
+  }
 
   /* ------------- =IMAGE REPLACEMENT  --------------- */
   h2{width: 32%;float: right;}

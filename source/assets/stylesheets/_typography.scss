@@ -30,11 +30,7 @@ html, body, textarea, input {
                    url("/assets/fonts/entypo-social.svg") format("svg");
 }
 
-
-
-
-
-h1, h2, h3, h4, h5, .projects li a span.title{
+h1, h2, .projects li a span.title{
   font-family: 'JeanLucWeb-Thin', Arial, "Helvetica Neue", Helvetica, sans-serif;
   text-transform: uppercase;
 }
@@ -43,15 +39,14 @@ h1, h2, h3, h4, h5, .projects li a span.title{
 .social a {
   font-family: 'Entypo Social';
   font-size: 50px;
-  line-height: 1 !important;
+  line-height: 0.7;
 }
 
-// Font Size
-// ------------------------------------------------------------
-
-  
-  h2 {@include font_size(38);}
-
-  span.info, .bio, footer{@include font_size(12);font-weight: bold;}
-
-  footer{@include font_size(10);}
+ 
+h2 {@include font_size(38);}
+.vcard p{@include font_size(18);line-height: 1;font-weight: bold;}
+span.info, .bio, footer, h3{
+  @include font_size(12);
+  font-weight: 800;
+}
+footer{@include font_size(10);}
