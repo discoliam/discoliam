@@ -16,11 +16,22 @@ html, body, textarea, input {
 
 @font-face {
   font-family: 'JeanLucWeb-Thin';
-  src: url('/assets/fonts/jeanlucweb-bold.eot');
+  src: url('/assets/fonts/jeanlucweb-thin.eot');
   src: local('☺'), url("/assets/fonts/jeanlucweb-thin.woff") format("woff"),
                    url("/assets/fonts/jeanlucweb-thin.otf") format("opentype"),
                    url("/assets/fonts/jeanlucweb-thin#webfontdsa4toug") format("svg");
 }
+
+@font-face {
+  font-family: 'Entypo Social';
+  src: url('/assets/fonts/entypo-social.eot');
+  src: local('☺'), url("/assets/fonts/entypo-social.woff") format("woff"),
+                   url("/assets/fonts/entypo-social.otf") format("opentype"),
+                   url("/assets/fonts/entypo-social.svg") format("svg");
+}
+
+
+
 
 
 h1, h2, h3, h4, h5, .projects li a span.title{
@@ -28,6 +39,12 @@ h1, h2, h3, h4, h5, .projects li a span.title{
   text-transform: uppercase;
 }
 
+
+.social a {
+  font-family: 'Entypo Social';
+  font-size: 50px;
+  line-height: 1 !important;
+}
 
 // Font Size
 // ------------------------------------------------------------

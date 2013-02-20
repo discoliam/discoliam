@@ -16,7 +16,7 @@ a {
   color: $main;
   text-decoration: none;
   &:link, &:visited, &:active  {color: $main;}
-  &:hover { color: $dark;}
+  &:hover { color: darken($main, 20%);}
   &:active, &:hover {outline: none;}
 }
 
@@ -123,35 +123,11 @@ h2{
 
 nav.social{
   padding: 0;
+  a{
+    color: $contrast;
+    &:hover{color:darken($contrast, 10%);}
+  }
 }
-
-nav.social a {
-  float:left;
-  width: 32px;
-  height: 32px;
-  display: block;
-  margin: 0 0 0 1%;
-  &:first-child{margin-left: 0;}
-}
-
-/* -------------- =LINK-------------- */
-nav.social a{
- overflow:hidden;
- text-align:left;
- display:block;
- line-height:0;
- text-indent:-1000em
-}
-
-nav.social a.facebook {background: url(/assets/images/facebook-32x32.png) right center no-repeat;}
-nav.social a.twitter {background: url(/assets/images/twitter-32x32.png) right center no-repeat;}
-nav.social a.flickr {background: url(/assets/images/flickr-32x32.png) center center no-repeat;background-size: cover;color: black;}
-nav.social a.lastfm {background: url(/assets/images/lastfm-32x32.png);}
-nav.social a.github {background: url(/assets/images/github-32x32.png) no-repeat right center;color:black;   }
-nav.social a.linked-in {background: url(/assets/images/linkedin-32x32.png) no-repeat right center;color:black;   }
-nav.social a.instagram {background: url(/assets/images/instagram-32x32.png) no-repeat right center;color:black;   }
-nav.social a.lanyrd {background: url(/assets/images/lanyrd-32x32.png) no-repeat right center;color:black;   }
-nav.social a.skype {background: url(/assets/images/skype-32x32.png) no-repeat right center;color:black;   }
 
 
 /* -------------- =FOOTER-------------- */
