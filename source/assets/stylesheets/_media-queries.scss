@@ -38,12 +38,17 @@
 
   .projects li:nth-child(2n+2){margin-right: 2%;}
 
-
-  h2.projects-title{float: right;}
-  h2.contact-title {float: left;margin-top: 5%;clear:both;} 
+  h2{
+    width: 32%;
+    float: right;
+    span {display:none;}
+    img{width: 100%;display:block;}
+    &.projects-title{float: right;margin: 11px 0 0 0;}
+    &.contact-title {float: left;margin-top: 5%;clear:both;width: 40%;} 
+  }
 
   .vcard {
-    width: 55%;
+    width: 45%;
     float: right;
     margin-top: 5%;
   }
@@ -54,26 +59,20 @@
 
   .clients{
     float: right;
-    width: 32%;
-    margin: 8% 0% 0 0;
     text-align: center;
+    width: 32%;
+    h3{margin: 8% 0;}
     ul li{
-      margin: 0 0 8% 0;
-      width: 100%;
-      
+      margin: 0 auto 8% auto;
+      float:none;
+      &:first-child{margin-left: auto;}
     }
   }
-
-  /* ------------- =IMAGE REPLACEMENT  --------------- */
-  h2{width: 32%;float: right;}
-  h2 span {display:none;}
-  h2 img{width: 100%;display:block;}
   
 }
 
 /* 992 =================================================== */
 @media only screen and (min-width: 992px) {
  .projects li a span.info{bottom: 1.5%;}
-  footer{width: 50%;}
 }
 

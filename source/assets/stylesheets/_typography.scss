@@ -35,18 +35,23 @@ h1, h2, .projects li a span.title{
   text-transform: uppercase;
 }
 
-
 .social a {
   font-family: 'Entypo Social';
-  font-size: 50px;
-  line-height: 0.7;
+  @include font_size(50);
+  line-height: 0.5;
 }
-
  
 h2 {@include font_size(38);}
-.vcard p{@include font_size(18);line-height: 1;font-weight: bold;}
+
+.vcard p{
+  @include font_size(18);
+  line-height: 1;
+  font-weight: bold;
+}
+
 span.info, .bio, footer, h3{
   @include font_size(12);
   font-weight: 800;
 }
+
 footer{@include font_size(10);}
