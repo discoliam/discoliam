@@ -18,6 +18,13 @@
   
   .projects li a span.info{bottom: 1.5%;}
 
+  .clients ul li{
+    margin: 0 4% 8% 0%;
+    &:nth-child(2n+2){ margin-right: 4%;}
+    &:nth-child(3n+3){ margin-right: 0;}
+  }
+
+
 }
 
 
@@ -63,9 +70,12 @@
     width: 32%;
     h3{margin: 8% 0;}
     ul li{
-      margin: 0 auto 8% auto;
+      margin: 0 auto 20px auto;
       float:none;
+      height: auto;
       &:first-child{margin-left: auto;}
+      &:nth-child(2n+2){ margin-right: auto;}
+      &:nth-child(3n+3){ margin-right: auto;}
     }
   }
   

@@ -102,16 +102,19 @@ h2{
     padding: 0;
     margin: 0 0 4% 0;
     li{
+      height: 72px;
       list-style-type: none;
       float: left;
       padding: 0;
-      margin: 0 0 4% 8%;
-      &:first-child{margin-left:0;}
+      margin: 0 15% 8% 0%;
+      width: 140px;
+      &:nth-child(2n+2){ margin-right: 0;}
     }
   }
 }
 
-.clients ul li{
+.clients ul li {
+  span{
     background: url(/assets/images/clients.png) no-repeat 0 0;
     width:140px;
     overflow: hidden;
@@ -119,9 +122,13 @@ h2{
     display: block;
     line-height:0;
     text-indent: -1000em;
-  &.kia {background-position: 0 0; height: 71px;}
-  &.good-energy {background-position: 0 -103px;height: 50px;}
-  &.work-the-world {background-position: 0 -71px;height: 32px;}
+  }
+  &.kia span{background-position: 0 0; height: 72px;}
+  &.good-energy span{background-position: 0 -72px;height: 50px;}
+  &.work-the-world span{background-position: 0 -122px; height: 32px;}
+  &.puffin span{background-position: 50px -153px; height: 58px;}
+  &.onezeroone span{background-position: 34px -211px; height: 62px;}
+  &.adventurists span{background-position: 0 -273px;height: 65px;}
 
 }
 
