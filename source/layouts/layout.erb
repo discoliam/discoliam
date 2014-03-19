@@ -62,20 +62,14 @@
 
   <body>
     <a href="#main-content" class="hidden">Skip to Main Content</a>
-    <div class="content">
+    <header role="banner">
       <h1 class="site-title"><a href="/" title="Discoliam.com">Discoliam</a></h1>
       <p class="bio">Discoliam (Liam Richardson to his parents) is a Front End Developer based in Bristol, UK. He built award wining websites at <a href="http://www.wearebeef.co.uk" title="Beef">Beef</a>, rides bicycles, enjoys live music and eats falafel.</p>
-
-        <%= yield %>
-
-      <footer>
-        <p class="copy">
-          &copy; 2006 – 2014 Liam Richardson. All rights reserved.<br />
-          Built using <a href="http://middlemanapp.com/" title="Middleman App">Middleman</a>, <a href="http://sass-lang.com" title="SASS">SASS</a>, and plenty of trial and error.<br />
-          Based on an original design by <a href="#" title="Richard Windsor">Richard Windsor</a>.
-        </p>
-      </footer>
-    </div>
+    </header>
+      <%= yield %>
+    <footer role=“contentinfo”>
+      <p>&copy; 2006 – 2014 Liam Richardson. All rights reserved. Built using <a href="http://middlemanapp.com/" title="Middleman App">Middleman</a>, <a href="http://sass-lang.com" title="SASS">SASS</a>, and plenty of trial and error. Design by <a href="#" title="Richard Windsor">Richard Windsor</a>.</p>
+    </footer>
     <script type="text/javascript">
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-3692424-2']);
