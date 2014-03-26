@@ -49,3 +49,13 @@ h1.site-title{
 h2{@include font_size(40);}
 h3{@include font_size(30);}
 h4{@include font_size(20);}
+
+
+/* -------------- =Footer-------------- */
+footer{
+  clear: both;
+  display: block;
+  text-align: center;
+  padding: 50px 10% 90px 10%;
+  font-size: 11px;
+}

@@ -1,6 +1,74 @@
 // Modules
 
-// Projects
-.projects-list{
-  @include list_style_none;
+//  Blocks 
+.block{
+  display: block;
+  padding-bottom: 3px;
+  margin-bottom: 17px;
+  background: $main image-url("border-bottom.gif") no-repeat left bottom;
+  text-align: center;
+  color: $background;
+  &.small {@include block_size(100);}
+  &.medium {@include block_size(220);}
+  &.large {
+    @include block_size(460);
+    background-size:cover;
+    background-repeat:no-repeat;
+  }
 }
+
+// Block Text
+.block {
+  position: relative;
+  span{display: block;}
+
+  .title{
+    font-size: 70px;
+    font-family: 'JeanLucWeb-Thin', Arial, "Helvetica Neue", Helvetica, sans-serif;
+    position: relative;
+    top: 50%;
+    @include transform(translateY(-50%));
+  }
+
+  .desc{
+    font-size: 15px;
+    font-weight: 700;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+  }
+}
+
+// Project Block BGs
+
+.persona-bmx{background-image: image-url("persona-bmx-bg.jpg")}
+.longfox{background-image: image-url("longfox-bg.jpg");}
+.moustache-booth{background-image: image-url("moustache-booth-bg.jpg");}
+.brizzle-ipsum{background-image: image-url("brizzle-ipsum-bg.jpg");}
+
+
+// Social Blocks Colours
+.block{
+  &.twitter{background-color: $twitter;}
+  &.github{background-color: $github;}
+  &.instagram{background-color: $instagram;}
+  &.lastfm{background-color: $lastfm;}
+  &.facebook{background-color: $facebook;}
+  &.linkedin{background-color: $linkedin;}
+  &.skype{background-color: $skype;}
+  &.stackoverflow{background-color: $stackoverflow;}
+}
+
+// Social Block Wrapper
+nav.social {
+  max-width: 460px;
+  .block{
+    float: left;
+    margin-right: 20px;
+    &:nth-child(4n+0) {margin-right:0;}
+  }
+}
+
+// Footer 
+p.copy {color: $light-contrast;}
