@@ -10,7 +10,7 @@ $dark:#333;          // Dark Gray
 
 $main:#f38430;          // Orange
 $background: #f4f5ec;   // Beige
-$contact: #8a6eaf;      // Purple
+$cv: #8a6eaf;      // Purple
 $contrast: #19e3bd;     // Turquoise
 $light-contrast: #c3c4b8; //light Beige / grey
 
@@ -26,6 +26,20 @@ $linkedin: #006699;
 $skype: #00aff0;
 $stackoverflow: #fe7a15;
 
+//Client Colours
+$good-energy: #f5c800;
+$gap-medics: #2d2d2d;
+$work-the-world: #004892;
+$bdh: #192123;
+$rau: #000;
+$puffin: #fff;
+$transparency: #3898ec;
+$market-watch: #3c3c3b;
+$twc: #fff;
+$kia: #ca0020;
+$scouts: #4d2177;
+$onezeroone: #00abbd;
+$the-adventurists: #f00000;
 
 
 
@@ -59,4 +73,26 @@ $basefont: 16;
     -webkit-transform: $params;
     -moz-transform:    $params;
     transform:         $params;
+}
+
+
+// Placeholders
+// ------------------------------------------------------------
+
+%clearfix {
+   &:after {
+      content: ".";
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden;
+  }
+}
+
+@mixin image-replacement {
+   overflow: hidden;
+   text-align: left;
+   display: block;
+   line-height:0;
+   text-indent: -1000em;
 }

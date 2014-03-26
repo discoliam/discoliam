@@ -1,5 +1,32 @@
 // Modules
 
+
+// Header
+header h1{
+  // position: absolute;
+  // top: 0;
+  // left: 0;
+  padding: 0;
+  margin: 0;
+  a{
+    letter-spacing: -1px;
+    font-size: 40px;
+    line-height: 0.4;
+  }
+}
+
+// Bio
+.block.text.bio{
+  height: 460px;
+  padding-top: 154px;
+  p{font-size: 15px}
+  p.contact-deets{font-size: 20px;margin-bottom: 73px;}
+  h2{background: image-url("projects.gif") no-repeat 0 0;}
+}
+
+
+
+
 //  Blocks 
 .block{
   display: block;
@@ -17,7 +44,22 @@
   }
 }
 
-// Block Text
+// Block (Text Based)
+.block.text{
+  text-align: left;
+  padding: 20px;
+  max-width: 420px;
+  background-color: $light;
+  color: $dark;
+  h2{
+    @include image-replacement;
+    width: 463px;
+    height: 283px;
+    margin: -154px 0 0 -20px;
+  }
+}
+
+// Project Block Text
 .block {
   position: relative;
   span{display: block;}
@@ -47,18 +89,63 @@
 .moustache-booth{background-image: image-url("moustache-booth-bg.jpg");}
 .brizzle-ipsum{background-image: image-url("brizzle-ipsum-bg.jpg");}
 
+//Clients Colours
+.good-energy{background-color: $good-energy;}
+.gap-medics{background-color: $gap-medics;}
+.work-the-world{background-color: $work-the-world;}
+.bdh{background-color: $bdh;}
+.rau{background-color: $rau;}
+.puffin{background-color: $puffin;}
+.transparency{background-color: $transparency;}
+.market-watch{background-color: $market-watch;}
+.twc{background-color: $twc;}
+.kia{background-color: $kia;}
+.scouts{background-color: $scouts;}
+.onezeroone{background-color: $onezeroone;}
+.the-adventurists{background-color: $the-adventurists;}
+
+
+// Contact
+.block.text.contact{
+  height: 460px;
+  padding-top: 154px;
+  h2{background: image-url("contact.gif") no-repeat 0 0;}
+}
+
+
+
+// CV
+.block.text.cv{
+  height: 180px;
+  background-color: $cv;
+  position: relative;
+  .cv-links{position: absolute;bottom: 20px;left: 20px;}
+  a{
+    display: inline-block;
+    clear: both;
+    float: left;
+    color: $light;
+    font-size: 20px;
+    &:hover{color: $contrast;}
+    span{display: inline;color: $light-contrast;font-size: 12px;}
+  }
+}
+
 
 // Social Blocks Colours
-.block{
-  &.twitter{background-color: $twitter;}
-  &.github{background-color: $github;}
-  &.instagram{background-color: $instagram;}
-  &.lastfm{background-color: $lastfm;}
-  &.facebook{background-color: $facebook;}
-  &.linkedin{background-color: $linkedin;}
-  &.skype{background-color: $skype;}
-  &.stackoverflow{background-color: $stackoverflow;}
+.block {
+  &.small{background-size: 60%;background-position: center center; background-repeat: no-repeat;text-indent: -1000em;}
+  &.twitter{background-color: $twitter; background-image: image-url("iconmonstr-twitter-icon.svg");}
+  &.github{background-color: $github; background-image: image-url("iconmonstr-github-6-icon.svg");}
+  &.instagram{background-color: $instagram; background-image: image-url("iconmonstr-instagram-6-icon.svg");}
+  &.lastfm{background-color: $lastfm; background-image: image-url("iconmonstr-last-fm-icon.svg");}
+  &.facebook{background-color: $facebook; background-image: image-url("iconmonstr-facebook-icon.svg");}
+  &.linkedin{background-color: $linkedin; background-image: image-url("iconmonstr-linkedin-icon.svg");}
+  &.skype{background-color: $skype; background-image: image-url("iconmonstr-skype-icon.svg");}
+  &.stackoverflow{background-color: $stackoverflow; background-image: image-url("iconmonstr-stackoverflow-icon.svg");}
 }
+
+
 
 // Social Block Wrapper
 nav.social {
