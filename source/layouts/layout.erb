@@ -17,7 +17,7 @@
     <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;"/>
 
     <meta name="author" content="Liam Richardson" />
-    <meta name="copyright" content="2014, Liam Richardson" />
+    <meta name="copyright" content="<%= Time.now.year %>, Liam Richardson" />
 
     <meta name="Geo.Country" content="GB" />
     <meta name="Geo.Region" content="GB-BST" />
@@ -31,7 +31,7 @@
     -->
 
     <!-- Social Meta Tags -->
-    <link rel="author" href="https://plus.google.com/+LiamRichardsonDisco"/> <!-- TODO: Fill in G+ Personal Account Details -->
+    <link rel="author" href="https://plus.google.com/+LiamRichardsonDisco"/>
 
     <meta property="og:title" content="Liam Richardson - Front End Web Developer"/>
     <meta property="og:type" content="website"/>
@@ -41,10 +41,10 @@
     <meta property="og:locale" content="en_GB"/>
 
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:url" content="http://discoliam.com"> <!-- TODO: Fill in Card URL (Should be current page URL) -->
-    <meta name="twitter:creator" content="@discoliam"> <!-- TODO: Fill in Card Creator (Twitter Account)  -->
-    <meta name="twitter:title" content="Liam Richardson"> <!-- TODO: Fill in Card Title  -->
-    <meta name="twitter:description" content="Liam Richardson is a Front End Developer based in Bristol, UK."> <!-- TODO: Fill in Card Description  -->
+    <meta name="twitter:url" content="http://discoliam.com">
+    <meta name="twitter:creator" content="@discoliam">
+    <meta name="twitter:title" content="Liam Richardson">
+    <meta name="twitter:description" content="Liam Richardson is a Front End Developer based in Bristol, UK.">
     <meta name="twitter:image" content="#"> <!-- TODO: Fill in Card Image  -->
 
     <!-- PREFETCH -->
@@ -57,18 +57,26 @@
     <link rel="prefetch" href="/assets/images/moustache.jpg">
     <link rel="prefetch" href="/assets/images/platter.png">
     <link rel="prefetch" href="/assets/images/clients.png">
+
+    <!-- STYLESHEETS -->
+    <link href='http://fonts.googleapis.com/css?family=Karla:400,400italic,700' rel='stylesheet' type='text/css'>
     <%= stylesheet_link_tag 'application' %>
   </head>
 
   <body>
     <a href="#main-content" class="hidden">Skip to Main Content</a>
     <header role="banner">
-      <h1 class="site-title"><a href="/" title="Discoliam.com">Discoliam</a></h1>
-      <p class="bio">Discoliam (Liam Richardson to his parents) is a Front End Developer based in Bristol, UK. He built award wining websites at <a href="http://www.wearebeef.co.uk" title="Beef">Beef</a>, rides bicycles, enjoys live music and eats falafel.</p>
+      <h1><a href="/" title="Discoliam.com">Discoliam</a></h1>
+      <p>
+        I'm Liam, a Senior Front End Developer based in Bristol, UK. For the past few years I have been building award winning websites at Beef, riding and falling off a plethora of bicycles, going to gigs and eating falafel.
+      </p>
     </header>
       <%= yield %>
     <footer role=“contentinfo”>
-      <p>&copy; 2006 – 2014 Liam Richardson. All rights reserved. Built using <a href="http://middlemanapp.com/" title="Middleman App">Middleman</a>, <a href="http://sass-lang.com" title="SASS">SASS</a>, and plenty of trial and error. Design by <a href="#" title="Richard Windsor">Richard Windsor</a>.</p>
+      <p>
+        &copy; 2006 – <%= Time.now.year %> Liam Richardson. All rights reserved. Built using <a href="http://middlemanapp.com/" title="Middleman App">Middleman</a>, <a href="http://sass-lang.com" title="SASS">SASS</a>, and plenty of trial and error.<br />
+        Design by <a href="#" title="Richard Windsor">Richard Windsor</a>. Social Icons by <a href="http://iconmonstr.com/">IconMonstr</a>
+      </p>
     </footer>
     <script type="text/javascript">
       var _gaq = _gaq || [];
