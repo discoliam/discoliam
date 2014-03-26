@@ -21,7 +21,7 @@ body{
 a {
   color: $main;
   text-decoration: none;
-  &:hover { color: darken($main, 20%);}
+  &:hover { color: $contrast;}
   @include single-transition(color, 100ms, linear);
 }
 
@@ -30,9 +30,14 @@ a {
 
 /* -------------- =Headings-------------- */
 
+h1 a{
+  color: $background;
+  background: $dark;
+}
+
+
 h1, h2, h3, h4{
   color: $dark;
-  a{color: $dark;}
 }
 
 h1.site-title{

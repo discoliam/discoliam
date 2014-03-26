@@ -1,7 +1,9 @@
 // Modules
+// ------------------------------------------------------------
 
 
 // Header
+// ------------------------------------------------------------
 header h1{
   // position: absolute;
   // top: 0;
@@ -9,40 +11,44 @@ header h1{
   padding: 0;
   margin: 0;
   a{
-    letter-spacing: -1px;
     font-size: 40px;
-    line-height: 0.4;
+    line-height: 1;
+    text-transform: lowercase;
   }
 }
 
-// Bio
-.block.text.bio{
-  height: 460px;
-  padding-top: 154px;
-  p{font-size: 15px}
-  p.contact-deets{font-size: 20px;margin-bottom: 73px;}
-  h2{background: image-url("projects.gif") no-repeat 0 0;}
-}
 
-
-
-
-//  Blocks 
+// Blocks
+// ------------------------------------------------------------
 .block{
   display: block;
-  padding-bottom: 3px;
-  margin-bottom: 17px;
-  background: $main image-url("border-bottom.gif") no-repeat left bottom;
+  margin-bottom: 20px;
   text-align: center;
   color: $background;
-  &.small {@include block_size(100);}
-  &.medium {@include block_size(220);}
-  &.large {
-    @include block_size(460);
-    background-size:cover;
-    background-repeat:no-repeat;
+  position: relative;
+  &.small, &.small .overlay {@include block_size(100);}
+  &.medium, &.medium .overlay  {@include block_size(220);}
+  &.large, &.large .overlay  {@include block_size(460);}
+  &.large{background-size:cover;background-repeat:no-repeat;clear: both;}
+  &.small, &.medium {background-position: center center; background-repeat: no-repeat;text-indent: -1000em;}
+
+  .overlay{
+    display: block;
+    opacity: 0;
+    z-index: 999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(#000, 0.75) image-url("iconmonstr-link-icon.svg") no-repeat center center;
+    background-size: 40%;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
+    transition: opacity .25s ease-in-out;
   }
+
 }
+
+a.block:hover .overlay{opacity: 1;}
 
 // Block (Text Based)
 .block.text{
@@ -51,6 +57,7 @@ header h1{
   max-width: 420px;
   background-color: $light;
   color: $dark;
+  clear: both;
   h2{
     @include image-replacement;
     width: 463px;
@@ -59,19 +66,28 @@ header h1{
   }
 }
 
-// Project Block Text
-.block {
-  position: relative;
-  span{display: block;}
+// Bio
+// ------------------------------------------------------------
+.block.text.bio{
+  height: 460px;
+  padding-top: 154px;
+  p{font-size: 15px}
+  p.contact-deets{font-size: 20px;margin-bottom: 73px;}
+  h2{background: image-url("projects.gif") no-repeat 0 0;}
+}
 
+// Block (Project Text)
+// ------------------------------------------------------------
+.block.large {
+  span{display: block;}
   .title{
     font-size: 70px;
     font-family: 'JeanLucWeb-Thin', Arial, "Helvetica Neue", Helvetica, sans-serif;
     position: relative;
     top: 50%;
     @include transform(translateY(-50%));
+    line-height: 0.9;
   }
-
   .desc{
     font-size: 15px;
     font-weight: 700;
@@ -80,45 +96,75 @@ header h1{
     left: 0;
     width: 100%;
   }
+  &:hover{color: $background;}
 }
 
-// Project Block BGs
-
+// Block (Project BG's)
+// ------------------------------------------------------------
 .persona-bmx{background-image: image-url("persona-bmx-bg.jpg")}
 .longfox{background-image: image-url("longfox-bg.jpg");}
 .moustache-booth{background-image: image-url("moustache-booth-bg.jpg");}
 .brizzle-ipsum{background-image: image-url("brizzle-ipsum-bg.jpg");}
 
-//Clients Colours
-.good-energy{background-color: $good-energy;}
-.gap-medics{background-color: $gap-medics;}
-.work-the-world{background-color: $work-the-world;}
-.bdh{background-color: $bdh;}
-.rau{background-color: $rau;}
-.puffin{background-color: $puffin;}
-.transparency{background-color: $transparency;}
-.market-watch{background-color: $market-watch;}
-.twc{background-color: $twc;}
-.kia{background-color: $kia;}
-.scouts{background-color: $scouts;}
-.onezeroone{background-color: $onezeroone;}
-.the-adventurists{background-color: $the-adventurists;}
+
+// Block (Clients layout)
+// ------------------------------------------------------------
+.block.medium{
+  float: left;
+  margin-right: 20px;
+}
+
+
+// Block (Clients BG's)
+// ------------------------------------------------------------
+.good-energy{background-color: $good-energy; background-image: image-url("logo-good-energy.png"); clear:left;margin-right: 20px;}
+.gap-medics{background-color: $gap-medics; background-image: image-url("logo-gap-medics.png");}
+
+.work-the-world{background-color: $work-the-world;background-image: image-url("logo-work-the-world.png");clear:left; margin-right: 20px;}
+.rau{background-color: $rau; background-image: image-url("logo-rau.png");}
+
+.bdh{background-color: $bdh; background-image: image-url("logo-bdh.png"); clear:left; margin-right: 20px;}
+.puffin{background-color: $puffin; background-image: image-url("logo-puffin.png");}
+
+
+.transparency{background-color: $transparency; background-image: image-url("logo-transparency.png"); clear:left; margin-right: 20px;}
+.market-watch{background-color: $market-watch; background-image: image-url("logo-market-watch.png");}
+
+// .twc{background-color: $twc;  background-image: image-url("logo-twc.png"); clear:left; margin-right: 20px;}
+
+.kia{background-color: $kia;  background-image: image-url("logo-kia.png"); clear:left; margin-right: 20px;}
+.the-adventurists{background-color: $the-adventurists;  background-image: image-url("logo-the-adventurists.png");}
+
+.onezeroone{background-color: $onezeroone;  background-image: image-url("logo-onezeroone.png"); clear:left; margin-right: 20px;}
+.scouts{background-color: $scouts;  background-image: image-url("logo-scouts.png");}
+
 
 
 // Contact
+// ------------------------------------------------------------
 .block.text.contact{
   height: 460px;
   padding-top: 154px;
   h2{background: image-url("contact.gif") no-repeat 0 0;}
+  p{font-size: 20px; line-height: 1.2;}
+  p.fn{
+    font-size: 36px;
+    margin-top: 90px;
+    span{
+      color: $light-contrast;
+      font-size: 15px;
+      display: block;
+    }
+  }
 }
 
 
 
 // CV
+// ------------------------------------------------------------
 .block.text.cv{
   height: 180px;
   background-color: $cv;
-  position: relative;
   .cv-links{position: absolute;bottom: 20px;left: 20px;}
   a{
     display: inline-block;
@@ -132,9 +178,10 @@ header h1{
 }
 
 
-// Social Blocks Colours
+// Blocks (Social)
+// ------------------------------------------------------------
 .block {
-  &.small{background-size: 60%;background-position: center center; background-repeat: no-repeat;text-indent: -1000em;}
+  &.small{background-size: 60%;}
   &.twitter{background-color: $twitter; background-image: image-url("iconmonstr-twitter-icon.svg");}
   &.github{background-color: $github; background-image: image-url("iconmonstr-github-6-icon.svg");}
   &.instagram{background-color: $instagram; background-image: image-url("iconmonstr-instagram-6-icon.svg");}
@@ -148,6 +195,7 @@ header h1{
 
 
 // Social Block Wrapper
+// ------------------------------------------------------------
 nav.social {
   max-width: 460px;
   .block{
@@ -157,5 +205,6 @@ nav.social {
   }
 }
 
-// Footer 
+// Footer
+// ------------------------------------------------------------
 p.copy {color: $light-contrast;}

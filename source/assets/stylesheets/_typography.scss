@@ -22,17 +22,9 @@ html, body, textarea, input {
                    url("/assets/fonts/jeanlucweb-thin#webfontdsa4toug") format("svg");
 }
 
-@font-face {
-  font-family: 'Blackout-2am';
-  src: url('/assets/fonts/blackout_two_am-webfont.eot');
-  src: local('☺'), url("/assets/fonts/blackout_two_am-webfont.woff") format("woff"),
-                   url("/assets/fonts/blackout_two_am-webfont.otf") format("opentype"),
-                   url("/assets/fonts/blackout_two_am-webfont.svg") format("svg");
-}
-
-
 h1{
-  font-family: 'Blackout-2am', Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-family: 'JeanLucWeb-Thin', Arial, "Helvetica Neue", Helvetica, sans-serif;
+  text-rendering: optimizeLegibility;
 }
 
-h2, h3{font-size: 36px;padding: 0;margin:0;}
+h2, h3{font-size: 36px;padding: 0;margin:0;text-rendering: optimizeLegibility;}
