@@ -65,29 +65,19 @@ $basefont: 16;
 }
 
 @mixin block_size($size) {
-  width: $size + px;
-  height: $size + px;
+  width: $size;
+  height: $size ;
 }
 
 @mixin transform($params) {
-    -webkit-transform: $params;
-    -moz-transform:    $params;
-    transform:         $params;
+  -webkit-transform: $params;
+  -moz-transform:    $params;
+  transform:         $params;
 }
 
 
 // Placeholders
 // ------------------------------------------------------------
-
-%clearfix {
-   &:after {
-      content: ".";
-      display: block;
-      height: 0;
-      clear: both;
-      visibility: hidden;
-  }
-}
 
 @mixin image-replacement {
    overflow: hidden;

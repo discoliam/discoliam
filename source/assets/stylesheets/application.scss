@@ -1,6 +1,5 @@
-/* This is a manifest file that'll be compiled into application.css, which will include all the files listed below. */
+// This is a manifest file that'll be compiled into application.css, which will include all the files listed below
  
-
 @import "compass";
 @import "settings";
 @import "normalise";
@@ -8,4 +7,12 @@
 @import "base";
 @import "modules";
 
-// @import "_media-queries";
+// 495 ===================================================
+@media all and (min-width: 495px) {
+  @import "mq495";
+}
+
+// 975 ===================================================
+@media all and (min-width: 975px) {
+  @import "mq975";
+}

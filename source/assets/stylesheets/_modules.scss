@@ -1,13 +1,22 @@
 // Modules
 // ------------------------------------------------------------
 
+// Main 
+// ------------------------------------------------------------
+#main-content{
+  margin: 0 auto;
+  padding: 0 2%;
+  display: block;
+  max-width: 460px;
+}
 
 // Header
 // ------------------------------------------------------------
-header h1{
-  // position: absolute;
-  // top: 0;
-  // left: 0;
+header {
+  margin-bottom: 20px;
+}
+
+h1{
   padding: 0;
   margin: 0;
   a{
@@ -26,19 +35,27 @@ header h1{
   text-align: center;
   color: $background;
   position: relative;
-  &.small, &.small .overlay {@include block_size(100);}
-  &.medium, &.medium .overlay  {@include block_size(220);}
-  &.large, &.large .overlay  {@include block_size(460);}
+
+  border: solid transparent;
+  border-width: 0 0 3px;
+  border-image:image-url("border-bottom.gif") 1 repeat;
+
+  &.small {@include block_size(31%);}
+  &.medium {@include block_size(48%);}
+  &.large {@include block_size(100%);}
   &.large{background-size:cover;background-repeat:no-repeat;clear: both;}
-  &.small, &.medium {background-position: center center; background-repeat: no-repeat;text-indent: -1000em;}
+  &.small, &.medium {
+    background-position: center center; background-repeat: no-repeat;text-indent: -1000em; 
+    span{position: absolute;top: -20px;}
+  }
 
   .overlay{
     display: block;
     opacity: 0;
     z-index: 999;
-    position: absolute;
-    top: 0;
-    left: 0;
+    width: 100%;
+    position: relative;
+    display: block;
     background: rgba(#000, 0.75) image-url("iconmonstr-link-icon.svg") no-repeat center center;
     background-size: 40%;
     -moz-transition: opacity .25s ease-in-out;
@@ -51,6 +68,7 @@ header h1{
 a.block:hover .overlay{opacity: 1;}
 
 // Block (Text Based)
+// ------------------------------------------------------------
 .block.text{
   text-align: left;
   padding: 20px;
@@ -58,22 +76,14 @@ a.block:hover .overlay{opacity: 1;}
   background-color: $light;
   color: $dark;
   clear: both;
-  h2{
-    @include image-replacement;
-    width: 463px;
-    height: 283px;
-    margin: -154px 0 0 -20px;
-  }
 }
 
 // Bio
 // ------------------------------------------------------------
 .block.text.bio{
   height: 460px;
-  padding-top: 154px;
   p{font-size: 15px}
   p.contact-deets{font-size: 20px;margin-bottom: 73px;}
-  h2{background: image-url("projects.gif") no-repeat 0 0;}
 }
 
 // Block (Project Text)
@@ -83,10 +93,13 @@ a.block:hover .overlay{opacity: 1;}
   .title{
     font-size: 70px;
     font-family: 'JeanLucWeb-Thin', Arial, "Helvetica Neue", Helvetica, sans-serif;
-    position: relative;
+    position: absolute;
     top: 50%;
     @include transform(translateY(-50%));
     line-height: 0.9;
+    width: 100%;
+    z-index: 1;
+
   }
   .desc{
     font-size: 15px;
@@ -95,6 +108,7 @@ a.block:hover .overlay{opacity: 1;}
     bottom: 20px;
     left: 0;
     width: 100%;
+    z-index: 1;
   }
   &:hover{color: $background;}
 }
@@ -111,41 +125,36 @@ a.block:hover .overlay{opacity: 1;}
 // ------------------------------------------------------------
 .block.medium{
   float: left;
-  margin-right: 20px;
+  margin-right: 3%;
+  background-size:50%;
 }
 
 
 // Block (Clients BG's)
 // ------------------------------------------------------------
-.good-energy{background-color: $good-energy; background-image: image-url("logo-good-energy.png"); clear:left;margin-right: 20px;}
-.gap-medics{background-color: $gap-medics; background-image: image-url("logo-gap-medics.png");}
+.block.medium.block.medium.good-energy{background-color: $good-energy; background-image: image-url("logo-good-energy.png"); clear:left;}
+.block.medium.gap-medics{background-color: $gap-medics; background-image: image-url("logo-gap-medics.png");margin-right: 0;}
 
-.work-the-world{background-color: $work-the-world;background-image: image-url("logo-work-the-world.png");clear:left; margin-right: 20px;}
-.rau{background-color: $rau; background-image: image-url("logo-rau.png");}
+.block.medium.work-the-world{background-color: $work-the-world;background-image: image-url("logo-work-the-world.png");clear:left;}
+.block.medium.rau{background-color: $rau; background-image: image-url("logo-rau.png");margin-right: 0;}
 
-.bdh{background-color: $bdh; background-image: image-url("logo-bdh.png"); clear:left; margin-right: 20px;}
-.puffin{background-color: $puffin; background-image: image-url("logo-puffin.png");}
+.block.medium.bdh{background-color: $bdh; background-image: image-url("logo-bdh.png"); clear:left;}
+.block.medium.puffin{background-color: $puffin; background-image: image-url("logo-puffin.png");margin-right: 0;}
 
+.block.medium.transparency{background-color: $transparency; background-image: image-url("logo-transparency.png"); clear:left;}
+.block.medium.market-watch{background-color: $market-watch; background-image: image-url("logo-market-watch.png"); margin-right: 0;}
 
-.transparency{background-color: $transparency; background-image: image-url("logo-transparency.png"); clear:left; margin-right: 20px;}
-.market-watch{background-color: $market-watch; background-image: image-url("logo-market-watch.png");}
+.block.medium.kia{background-color: $kia;  background-image: image-url("logo-kia.png"); clear:left;}
+.block.medium.the-adventurists{background-color: $the-adventurists;  background-image: image-url("logo-the-adventurists.png"); margin-right: 0;}
 
-// .twc{background-color: $twc;  background-image: image-url("logo-twc.png"); clear:left; margin-right: 20px;}
-
-.kia{background-color: $kia;  background-image: image-url("logo-kia.png"); clear:left; margin-right: 20px;}
-.the-adventurists{background-color: $the-adventurists;  background-image: image-url("logo-the-adventurists.png");}
-
-.onezeroone{background-color: $onezeroone;  background-image: image-url("logo-onezeroone.png"); clear:left; margin-right: 20px;}
-.scouts{background-color: $scouts;  background-image: image-url("logo-scouts.png");}
-
+.block.medium.onezeroone{background-color: $onezeroone;  background-image: image-url("logo-onezeroone.png"); clear:left;}
+.block.medium.scouts{background-color: $scouts;  background-image: image-url("logo-scouts.png"); margin-right: 0;}
 
 
 // Contact
 // ------------------------------------------------------------
 .block.text.contact{
   height: 460px;
-  padding-top: 154px;
-  h2{background: image-url("contact.gif") no-repeat 0 0;}
   p{font-size: 20px; line-height: 1.2;}
   p.fn{
     font-size: 36px;
@@ -192,16 +201,15 @@ a.block:hover .overlay{opacity: 1;}
   &.stackoverflow{background-color: $stackoverflow; background-image: image-url("iconmonstr-stackoverflow-icon.svg");}
 }
 
-
-
 // Social Block Wrapper
 // ------------------------------------------------------------
 nav.social {
   max-width: 460px;
+  @include clearfix;
   .block{
     float: left;
-    margin-right: 20px;
-    &:nth-child(4n+0) {margin-right:0;}
+    margin-right: 3%;
+    &:nth-child(3n+0) {margin-right:0;}
   }
 }
 

@@ -1,0 +1,49 @@
+// 480
+// ------------------------------------------------------------
+
+// Main 
+// ------------------------------------------------------------
+#main-content{padding: 0 10px;}
+
+
+// Blocks
+// ------------------------------------------------------------
+.block{
+  &.small, &.small .overlay {@include block_size(100px);}
+  &.medium, &.medium .overlay  {@include block_size(220px);}
+  &.large, &.large .overlay  {@include block_size(460px);}
+  &.medium{background-size:auto;}
+}
+
+
+// Block (Text Based)
+// ------------------------------------------------------------
+.block.text{
+  h2{
+    @include image-replacement;
+    width: 463px;
+    height: 283px;
+    margin: -154px 0 0 -20px;
+  }
+  &.bio {padding-top: 154px; h2{background: image-url("projects.gif") no-repeat 0 0;}}
+  &.contact {padding-top: 154px; h2{background: image-url("contact.gif") no-repeat 0 0;}}
+}
+
+
+
+
+// Block (Clients layout)
+// ------------------------------------------------------------
+.block.medium{margin-right: 20px;}
+
+
+
+// Social Block Wrapper
+// ------------------------------------------------------------
+nav.social {
+  .block{
+    margin-right: 20px;
+    &:nth-child(3n+0) {margin-right:20px;}
+    &:nth-child(4n+0) {margin-right:0;}
+  }
+}

@@ -1,0 +1,72 @@
+// 960
+// ------------------------------------------------------------
+
+
+// Body
+// ------------------------------------------------------------
+body{
+  background: $background image-url("bg.jpg") no-repeat fixed right top;
+}
+
+// Header
+// ------------------------------------------------------------
+header h1{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+// Main 
+// ------------------------------------------------------------
+#main-content{max-width: 940px;}
+
+// Bio
+// ------------------------------------------------------------
+.block.text.bio{
+  margin-top: 69px;
+  float: left;
+}
+
+.row{
+  min-height: 460px;
+  clear: both;
+}
+
+.col, .row{min-height: 460px;}
+
+// Row One
+.col.one{
+  float: left;
+  margin-left: 20px;
+}
+
+// Row Two
+.col.two,
+.col.four {
+  float: left;
+  .block.medium{
+    margin-right: 0;
+    clear: both;
+  }
+
+}
+
+.col.three{
+  float: left;
+  margin: 0 20px;
+}
+
+// Row Three
+
+.col.five,
+.col.six,
+.col.seven,
+.col.eight,
+.block.contact,
+.col.nine {
+  float: left;
+}
+
+.col.six, .col.eight, .col.nine{margin-left: 20px;}
+
+.col.nine{margin-top: 153px;}
