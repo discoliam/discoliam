@@ -22,51 +22,28 @@ header h1{
 
 // Bio
 // ------------------------------------------------------------
-.block.text.bio{
-  margin-top: 69px;
-  float: left;
-}
-
 .row{
   min-height: 460px;
   clear: both;
 }
 
-.col, .row{min-height: 460px;}
+// Float Left 
+.col, .block.text.bio, .block.contact{float: left;}
 
-// Row One
-.col.one{
-  float: left;
-  margin-left: 20px;
+// Left Padding
+.col{
+  &.one, &.three, &.four, &.six, &.eight, &.nine{margin-left: 20px;}
 }
 
-// Row Two
+// Vertical Medium Blocks
 .col.two,
 .col.four {
-  float: left;
   .block.medium{
     margin-right: 0;
     clear: both;
   }
-
 }
 
-.col.three{
-  float: left;
-  margin: 0 20px;
-}
-
-// Row Three
-
-.col.five,
-.col.six,
-.col.seven,
-.col.eight,
-.block.contact,
-.col.nine {
-  float: left;
-}
-
-.col.six, .col.eight, .col.nine{margin-left: 20px;}
-
+// Line Up text blocks
+.block.text.bio{margin-top: 69px;}
 .col.nine{margin-top: 153px;}
