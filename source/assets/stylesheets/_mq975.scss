@@ -59,4 +59,9 @@ header h1{
 
 // Web CV
 // ------------------------------------------------------------
+
+body.cv_index #main-content{
+  max-width: 960px;
+}
+
 .block.text.web-cv {margin-top: 80px;}

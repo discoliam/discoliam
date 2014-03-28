@@ -220,8 +220,11 @@ p.copy {color: $light-contrast;}
 
 // Web CV
 // ------------------------------------------------------------
+body.cv_index #main-content{
+  max-width: none;
+}
+
 .block.text.web-cv {
-  width: 100%;
-  padding-top: 20px;
+  max-width: none;
   h2{display: block;}
 }
