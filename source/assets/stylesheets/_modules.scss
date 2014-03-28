@@ -31,11 +31,10 @@ h1{
 // ------------------------------------------------------------
 .block{
   display: block;
-  margin-bottom: 20px;
+  margin-bottom: 17px;
   text-align: center;
   color: $background;
   position: relative;
-
   border: solid transparent;
   border-width: 0 0 3px;
   border-image:image-url("border-bottom.gif") 1 repeat;
@@ -71,8 +70,8 @@ a.block:hover .overlay{opacity: 1;}
 // ------------------------------------------------------------
 .block.text{
   text-align: left;
-  padding: 20px;
-  max-width: 420px;
+  padding: 0 30px;
+  max-width: 400px;
   background-color: $light;
   color: $dark;
   clear: both;
@@ -82,8 +81,10 @@ a.block:hover .overlay{opacity: 1;}
 // ------------------------------------------------------------
 .block.text.bio{
   h2{display: none;}
-  p{font-size: 15px}
-  p.contact-deets{font-size: 20px;margin-bottom: 73px;}
+  p{
+    font-size: 15px;line-height: 1.3;
+    &.contact-deets{font-size: 20px;margin: 11px 0 73px 0;}
+  }
 }
 
 // Block (Project Text)
@@ -99,6 +100,7 @@ a.block:hover .overlay{opacity: 1;}
     line-height: 0.9;
     width: 100%;
     z-index: 1;
+    letter-spacing: 5px;
 
   }
   .desc{
@@ -155,9 +157,9 @@ a.block:hover .overlay{opacity: 1;}
 // ------------------------------------------------------------
 .block.text.contact{
   p{font-size: 20px; line-height: 1.2;}
+  p.contact-deets-two{margin: 16px 0 69px 0;}
   p.fn{
     font-size: 36px;
-    margin-top: 90px;
     span{
       color: $light-contrast;
       font-size: 15px;
@@ -171,8 +173,11 @@ a.block:hover .overlay{opacity: 1;}
 // CV
 // ------------------------------------------------------------
 .block.text.cv{
-  height: 180px;
+  padding: 0 30px;
+  height: 220px;
   background-color: $cv;
+  max-width: 460px;
+  h3{padding-top: 20px;}
   .cv-links{position: absolute;bottom: 20px;left: 20px;}
   a{
     display: inline-block;
@@ -220,11 +225,11 @@ p.copy {color: $light-contrast;}
 
 // Web CV
 // ------------------------------------------------------------
-body.cv_index #main-content{
-  max-width: none;
-}
+// body.cv_index #main-content{
+//   max-width: none;
+// }
 
-.block.text.web-cv {
-  max-width: none;
-  h2{display: block;}
-}
+// .block.text.web-cv {
+//   max-width: none;
+//   h2{display: block;}
+// }

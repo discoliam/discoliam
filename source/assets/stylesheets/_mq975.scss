@@ -23,17 +23,16 @@ header h1{
 // Bio / Contact
 // ------------------------------------------------------------
 .block.text{
-  &.bio {height: 460px;}
-  &.contact {height: 444px;}
+  width: 400px;
+  height: 460px;
 }
-
-
 
 // Grid
 // ------------------------------------------------------------
 .row{
   min-height: 460px;
   clear: both;
+  &.last{margin-bottom: 104px;}
 }
 
 // Float Left 
@@ -41,7 +40,7 @@ header h1{
 
 // Left Padding
 .col{
-  &.one, &.three, &.four, &.six, &.eight, &.nine{margin-left: 20px;}
+  &.one, &.three, &.four, &.six, &.eight, &.nine{margin-left: 20px;max-width: 460px;}
 }
 
 // Vertical Medium Blocks
@@ -54,14 +53,10 @@ header h1{
 }
 
 // Line Up text blocks
-.block.text.bio{margin-top: 69px;}
-.col.nine{margin-top: 153px;}
+.block.text.bio{margin-top: 88px;}
+.col.nine{margin-top: 152px;}
 
 // Web CV
 // ------------------------------------------------------------
-
-body.cv_index #main-content{
-  max-width: 960px;
-}
-
-.block.text.web-cv {margin-top: 80px;}
+// body.cv_index #main-content{max-width: 940px;}
+// .block.text.web-cv {margin-top: 80px;}
