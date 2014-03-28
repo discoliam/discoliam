@@ -81,7 +81,7 @@ a.block:hover .overlay{opacity: 1;}
 // Bio
 // ------------------------------------------------------------
 .block.text.bio{
-  height: 460px;
+  h2{display: none;}
   p{font-size: 15px}
   p.contact-deets{font-size: 20px;margin-bottom: 73px;}
 }
@@ -154,7 +154,6 @@ a.block:hover .overlay{opacity: 1;}
 // Contact
 // ------------------------------------------------------------
 .block.text.contact{
-  height: 460px;
   p{font-size: 20px; line-height: 1.2;}
   p.fn{
     font-size: 36px;
@@ -216,3 +215,13 @@ nav.social {
 // Footer
 // ------------------------------------------------------------
 p.copy {color: $light-contrast;}
+
+
+
+// Web CV
+// ------------------------------------------------------------
+.block.text.web-cv {
+  width: 100%;
+  padding-top: 20px;
+  h2{display: block;}
+}

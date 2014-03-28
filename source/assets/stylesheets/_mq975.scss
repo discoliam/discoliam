@@ -20,7 +20,16 @@ header h1{
 // ------------------------------------------------------------
 #main-content{max-width: 940px;}
 
-// Bio
+// Bio / Contact
+// ------------------------------------------------------------
+.block.text{
+  &.bio {height: 460px;}
+  &.contact {height: 444px;}
+}
+
+
+
+// Grid
 // ------------------------------------------------------------
 .row{
   min-height: 460px;
@@ -47,3 +56,7 @@ header h1{
 // Line Up text blocks
 .block.text.bio{margin-top: 69px;}
 .col.nine{margin-top: 153px;}
+
+// Web CV
+// ------------------------------------------------------------
+.block.text.web-cv {margin-top: 80px;}

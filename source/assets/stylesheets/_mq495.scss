@@ -25,11 +25,9 @@
     height: 283px;
     margin: -154px 0 0 -20px;
   }
-  &.bio {padding-top: 154px; h2{background: image-url("projects.gif") no-repeat 0 0;}}
+  &.bio {padding-top: 154px; h2{background: image-url("projects.gif") no-repeat 0 0; display: block;}}
   &.contact {padding-top: 154px; h2{background: image-url("contact.gif") no-repeat 0 0;}}
 }
-
-
 
 
 // Block (Clients layout)
@@ -45,5 +43,21 @@ nav.social {
     margin-right: 20px;
     &:nth-child(3n+0) {margin-right:20px;}
     &:nth-child(4n+0) {margin-right:0;}
+  }
+}
+
+// Web CV
+// ------------------------------------------------------------
+.block.text.web-cv {
+  max-width: none;
+  padding-top: 20px;
+  h2{
+    display: block;
+    text-indent: 0;
+    background: none;
+    width: auto;
+    height: auto;
+    margin:0;
+    line-height: 1.2;
   }
 }

@@ -53,6 +53,10 @@ h3{@include font_size(30);}
 h4{@include font_size(20);}
 
 
+dt{
+  font-weight: bold;
+}
+
 /* -------------- =Footer-------------- */
 footer{
   clear: both;
