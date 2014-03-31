@@ -8,11 +8,7 @@
 @import "modules";
 
 // 495 ===================================================
-@media all and (min-width: 495px) {
-  @import "mq495";
-}
+@import "mq495";
 
 // 975 ===================================================
-@media all and (min-width: 975px) {
-  @import "mq975";
-}
+@import "mq975";

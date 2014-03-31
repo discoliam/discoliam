@@ -1,0 +1,76 @@
+// 480
+// ------------------------------------------------------------
+
+// Main 
+// ------------------------------------------------------------
+#main-content{padding: 0 10px;}
+
+
+// Blocks
+// ------------------------------------------------------------
+.block{
+  &.small, &.small .overlay {@include block_size(100px);}
+  &.medium, &.medium .overlay  {@include block_size(220px);}
+  &.large, &.large .overlay  {@include block_size(460px);}
+  &.medium{background-size:auto;}
+}
+
+
+// Block (Text Based)
+// ------------------------------------------------------------
+.block.text{
+  padding-top: 152px;
+  h2{
+    @include image-replacement;
+    width: 460px;
+    height: 283px;
+    margin: -152px 0 0 -30px;
+    display: block;
+  }
+  &.bio h2{background: image-url("projects.gif") no-repeat 0 0;display: block;}
+  &.contact h2{background: image-url("contact.gif") no-repeat 0 0;}
+}
+
+
+// Block (Clients layout)
+// ------------------------------------------------------------
+.block.medium{margin-right: 20px;}
+
+
+
+// Social Block Wrapper
+// ------------------------------------------------------------
+nav.social {
+  .block{
+    margin-right: 20px;
+    &:nth-child(3n+0) {margin-right:20px;}
+    &:nth-child(4n+0) {margin-right:0;}
+  }
+}
+
+// Web CV
+// ------------------------------------------------------------
+.block.text.web-cv {
+  max-width: none;
+  padding-top: 20px;
+  h2{
+    display: block;
+    text-indent: 0;
+    background: none;
+    width: auto;
+    height: auto;
+    margin:0;
+    line-height: 1.2;
+  }
+}
+
+// nav.social {
+//   max-width: none;
+//   .block{
+//     margin-right: 20px;
+//     &:nth-child(4n+0) {margin-right:20px;}
+//     &.stackoverflow{margin-right: 0;}
+//   }
+// }
+
+

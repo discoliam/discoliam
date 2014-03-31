@@ -1,0 +1,234 @@
+// Modules
+// ------------------------------------------------------------
+
+// Main 
+// ------------------------------------------------------------
+#main-content{
+  margin: 0 auto;
+  padding: 0 2%;
+  display: block;
+  max-width: 460px;
+}
+
+// Header
+// ------------------------------------------------------------
+header {
+  margin-bottom: 20px;
+}
+
+h1{
+  padding: 0;
+  margin: 0;
+  background: image-url("logo.svg") no-repeat 0 0;
+  @include image-replacement;
+  height: 32px;
+  width: 185px;
+}
+
+
+// Blocks
+// ------------------------------------------------------------
+.block{
+  display: block;
+  margin-bottom: 17px;
+  text-align: center;
+  color: $background;
+  position: relative;
+  border: solid transparent;
+  border-width: 0 0 3px;
+  border-image:image-url("border-bottom.gif") 1 repeat;
+
+  &.small {@include block_size(31%);}
+  &.medium {@include block_size(48%);}
+  &.large {@include block_size(100%);}
+  &.large{background-size:cover;background-repeat:no-repeat;clear: both;}
+  &.small, &.medium {
+    background-position: center center; background-repeat: no-repeat;text-indent: -1000em; 
+    span{position: absolute;top: -20px;}
+  }
+
+  .overlay{
+    display: block;
+    opacity: 0;
+    z-index: 999;
+    width: 100%;
+    position: relative;
+    display: block;
+    background: rgba(#000, 0.75) image-url("iconmonstr-link-icon.svg") no-repeat center center;
+    background-size: 40%;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
+    transition: opacity .25s ease-in-out;
+  }
+
+}
+
+a.block:hover .overlay{opacity: 1;}
+
+// Block (Text Based)
+// ------------------------------------------------------------
+.block.text{
+  text-align: left;
+  padding: 30px 30px 20px 30px;
+  max-width: 400px;
+  background-color: $light;
+  color: $dark;
+  clear: both;
+}
+
+// Bio
+// ------------------------------------------------------------
+.block.text.bio{
+  h2{display: none;}
+  p{
+    font-size: 15px;line-height: 1.3;
+    &.contact-deets{font-size: 20px;margin: 11px 0 73px 0;}
+  }
+}
+
+// Block (Project Text)
+// ------------------------------------------------------------
+.block.large {
+  span{display: block;}
+  .title{
+    font-size: 70px;
+    font-family: 'JeanLucWeb-Thin', Arial, "Helvetica Neue", Helvetica, sans-serif;
+    position: absolute;
+    top: 50%;
+    @include transform(translateY(-50%));
+    line-height: 0.9;
+    width: 100%;
+    z-index: 1;
+    letter-spacing: 5px;
+
+  }
+  .desc{
+    font-size: 15px;
+    font-weight: 700;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+  }
+  &:hover{color: $background;}
+}
+
+// Block (Project BG's)
+// ------------------------------------------------------------
+.persona-bmx{background-image: image-url("persona-bmx-bg.jpg")}
+.longfox{background-image: image-url("longfox-bg.jpg");}
+.moustache-booth{background-image: image-url("moustache-booth-bg.jpg");}
+.brizzle-ipsum{background-image: image-url("brizzle-ipsum-bg.jpg");}
+
+
+// Block (Clients layout)
+// ------------------------------------------------------------
+.block.medium{
+  float: left;
+  margin-right: 3%;
+  background-size:50%;
+}
+
+
+// Block (Clients BG's)
+// ------------------------------------------------------------
+.block.medium.block.medium.good-energy{background-color: $good-energy; background-image: image-url("logo-good-energy.png"); clear:left;}
+.block.medium.gap-medics{background-color: $gap-medics; background-image: image-url("logo-gap-medics.png");margin-right: 0;}
+
+.block.medium.work-the-world{background-color: $work-the-world;background-image: image-url("logo-work-the-world.png");clear:left;}
+.block.medium.rau{background-color: $rau; background-image: image-url("logo-rau.png");margin-right: 0;}
+
+.block.medium.bdh{background-color: $bdh; background-image: image-url("logo-bdh.png"); clear:left;}
+.block.medium.puffin{background-color: $puffin; background-image: image-url("logo-puffin.png");margin-right: 0;}
+
+.block.medium.transparency{background-color: $transparency; background-image: image-url("logo-transparency.png"); clear:left;}
+.block.medium.market-watch{background-color: $market-watch; background-image: image-url("logo-market-watch.png"); margin-right: 0;}
+
+.block.medium.kia{background-color: $kia;  background-image: image-url("logo-kia.png"); clear:left;}
+.block.medium.the-adventurists{background-color: $the-adventurists;  background-image: image-url("logo-the-adventurists.png"); margin-right: 0;}
+
+.block.medium.onezeroone{background-color: $onezeroone;  background-image: image-url("logo-onezeroone.png"); clear:left;}
+.block.medium.scouts{background-color: $scouts;  background-image: image-url("logo-scouts.png"); margin-right: 0;}
+
+
+// Contact
+// ------------------------------------------------------------
+.block.text.contact{
+  p{font-size: 20px; line-height: 1.2;}
+  p.contact-deets-two{margin: 16px 0 69px 0;}
+  p.fn{
+    font-size: 36px;
+    span{
+      color: $light-contrast;
+      font-size: 15px;
+      display: block;
+    }
+  }
+}
+
+
+
+// CV
+// ------------------------------------------------------------
+.block.text.cv{
+  padding: 0 30px;
+  height: 220px;
+  background-color: $cv;
+  max-width: 460px;
+  h3{padding-top: 20px;}
+  .cv-links{position: absolute;bottom: 20px;left: 20px;}
+  a{
+    display: inline-block;
+    clear: both;
+    float: left;
+    color: $light;
+    font-size: 20px;
+    &:hover{color: $contrast;}
+    span{display: inline;color: $contrast;font-size: 12px;}
+  }
+}
+
+
+// Blocks (Social)
+// ------------------------------------------------------------
+.block {
+  &.small{background-size: 60%;}
+  &.twitter{background-color: $twitter; background-image: image-url("iconmonstr-twitter-icon.svg");}
+  &.github{background-color: $github; background-image: image-url("iconmonstr-github-6-icon.svg");}
+  &.instagram{background-color: $instagram; background-image: image-url("iconmonstr-instagram-6-icon.svg");}
+  &.lastfm{background-color: $lastfm; background-image: image-url("iconmonstr-last-fm-icon.svg");}
+  &.facebook{background-color: $facebook; background-image: image-url("iconmonstr-facebook-icon.svg");}
+  &.linkedin{background-color: $linkedin; background-image: image-url("iconmonstr-linkedin-icon.svg");}
+  &.skype{background-color: $skype; background-image: image-url("iconmonstr-skype-icon.svg");}
+  &.stackoverflow{background-color: $stackoverflow; background-image: image-url("iconmonstr-stackoverflow-icon.svg");}
+}
+
+// Social Block Wrapper
+// ------------------------------------------------------------
+nav.social {
+  max-width: 460px;
+  @include clearfix;
+  .block{
+    float: left;
+    margin-right: 3%;
+    &:nth-child(3n+0) {margin-right:0;}
+  }
+}
+
+// Footer
+// ------------------------------------------------------------
+p.copy {color: $light-contrast;}
+
+
+
+// Web CV
+// ------------------------------------------------------------
+// body.cv_index #main-content{
+//   max-width: none;
+// }
+
+// .block.text.web-cv {
+//   max-width: none;
+//   h2{display: block;}
+// }
