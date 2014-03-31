@@ -38,14 +38,14 @@
     <meta property="og:image" content="#"/> <!-- TODO: Fill in OG Image -->
     <meta property="og:URL" content="http://discoliam.com"/>
     <meta property="og:description" content="Liam Richardson to is a Front End Developer based in Bristol, UK."/>
-    <meta property="og:locale" content="en_GB"/>
+    <!-- <meta property="og:locale" content="en_GB"/> -->
 
     <meta name="twitter:card" content="summary">
     <meta name="twitter:url" content="http://discoliam.com">
     <meta name="twitter:creator" content="@discoliam">
     <meta name="twitter:title" content="Liam Richardson">
     <meta name="twitter:description" content="Liam Richardson is a Front End Developer based in Bristol, UK.">
-    <meta name="twitter:image" content="#"> <!-- TODO: Fill in Card Image  -->
+    <!-- <meta name="twitter:image" content="#"> <!-- TODO: Fill in Card Image  --> -->
 
     <!-- PREFETCH -->
     <link rel="prefetch" href="/assets/images/bg.jpg">
@@ -74,7 +74,19 @@
 
     <!-- STYLESHEETS -->
     <link href='http://fonts.googleapis.com/css?family=Karla:400,400italic,700' rel='stylesheet' type='text/css'>
-    <%= stylesheet_link_tag 'application' %>
+    
+    <!--[if !IE]><!-->
+      <%= stylesheet_link_tag 'application' %>
+    <!--<![endif]-->
+
+    <!--[if gt IE 9]>
+      <%= stylesheet_link_tag 'application' %>
+    <![endif]-->
+
+    <!--[if lte IE 9]>
+      <%= stylesheet_link_tag 'ie' %>
+    <![endif]-->
+
   </head>
 
   <body class="<%= page_classes %>">
