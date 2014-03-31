@@ -34,7 +34,7 @@ configure :build do
   end
 
   activate :minify_css
-
-  
+  activate :gzip
+  activate :minify_html 
 
 end

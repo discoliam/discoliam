@@ -5,19 +5,46 @@
 // ------------------------------------------------------------
 
 /* Colours */
-$light:#fff;
-$dark:#333333;
+$light:#fff;            // White
+$dark:#333;          // Dark Gray
 
-$main:#ff6c00;          // Orange
+$main:#f38430;          // Orange
 $background: #f4f5ec;   // Beige
-$contact: #8a6eaf;      // Purple
+$cv: #8a6eaf;      // Purple
 $contrast: #19e3bd;     // Turquoise
+$light-contrast: #c3c4b8; //light Beige / grey
 
 $main-transparent: rgba(255, 108, 0, 0.8);
 
+// Social Colours
+$twitter: #55acee;
+$github: #4183c4;
+$instagram: #3f729b;
+$lastfm: #d12127;
+$facebook: #3b5998;
+$linkedin: #006699;
+$skype: #00aff0;
+$stackoverflow: #fe7a15;
+
+//Client Colours
+$good-energy: #f5c800;
+$gap-medics: #2d2d2d;
+$work-the-world: #004892;
+$bdh: #192123;
+$rau: #000;
+$puffin: #fff;
+$transparency: #3898ec;
+$market-watch: #3c3c3b;
+$twc: #fff;
+$kia: #ca0020;
+$scouts: #4d2177;
+$onezeroone: #00abbd;
+$the-adventurists: #f00000;
+
+
 
 /* Base Font Size */
-$basefont: 16;  
+$basefont: 16;
 
 
 
@@ -32,35 +59,30 @@ $basefont: 16;
   list-style-position: outside;
 }
 
-@mixin border_radius($radius: 4px) {
-  -moz-border-radius: $radius;
-  -webkit-border-radius: $radius;
-  -ms-border-radius: $radius;
-  border-radius: $radius;
-}
-
-@mixin button_style($base-color) {
-  display:inline-block;
-  background-color: $base-color;
-  padding: 14px 24px;
-  color: $light;
-  font-size: 14px;
-  font-weight: bold;
-  -webkit-transition: background .1s linear;
-  -moz-transition: background .1s linear;
-  -o-transition: background .1s linear;
-  -ms-transition: background .1s linear;
-  transition: background .1s linear;
-  text-decoration: none;
-  @include border_radius(3px);
-
-  &:hover {
-    background: #f26c4f;
-    color: #ffffff;
-  }
-} 
-
 @mixin font_size($size) {
   font-size: $size + px;
   font-size: ($size/$basefont) + 0rem;
+}
+
+@mixin block_size($size) {
+  width: $size;
+  height: $size ;
+}
+
+@mixin transform($params) {
+  -webkit-transform: $params;
+  -moz-transform:    $params;
+  transform:         $params;
+}
+
+
+// Placeholders
+// ------------------------------------------------------------
+
+@mixin image-replacement {
+   overflow: hidden;
+   text-align: left;
+   display: block;
+   line-height:0;
+   text-indent: -1000em;
 }
