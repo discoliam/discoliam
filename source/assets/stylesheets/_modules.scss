@@ -19,11 +19,10 @@ header {
 h1{
   padding: 0;
   margin: 0;
-  a{
-    font-size: 40px;
-    line-height: 1;
-    text-transform: lowercase;
-  }
+  background: image-url("logo.svg") no-repeat 0 0;
+  @include image-replacement;
+  height: 32px;
+  width: 185px;
 }
 
 
