@@ -185,7 +185,7 @@ a.block:hover .overlay{opacity: 1;}
     color: $light;
     font-size: 20px;
     &:hover{color: $contrast;}
-    span{display: inline;color: $light-contrast;font-size: 12px;}
+    span{display: inline;color: $contrast;font-size: 12px;}
   }
 }
 
