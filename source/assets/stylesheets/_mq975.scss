@@ -31,7 +31,6 @@ header h1{
 // Grid
 // ------------------------------------------------------------
 .row{
-  min-height: 460px;
   clear: both;
   &.last{margin-bottom: 104px;}
 }
@@ -40,22 +39,20 @@ header h1{
 .col, .block.text.bio, .block.contact{float: left;}
 
 // Left Padding
-.col{
-  &.one, &.three, &.four, &.six, &.eight, &.nine{margin-left: 20px;max-width: 460px;}
+.col {
+  margin-left: 20px;max-width: 460px;
+  &:first-child {margin-left:0;}
 }
 
 // Vertical Medium Blocks
-.col.two,
-.col.four {
-  .block.medium{
-    margin-right: 0;
-    clear: both;
-  }
+.col.vertical .block.medium{
+  margin-right: 0;
+  clear: both;
 }
 
 // Line Up text blocks
 .block.text.bio{margin-top: 88px;}
-.col.nine{margin-top: 152px;}
+.block.text.cv{margin-top: 152px;}
 
 // Web CV
 // ------------------------------------------------------------
