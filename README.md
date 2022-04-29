@@ -1,16 +1,16 @@
-### Hi there 👋
+# Discoliam
+_he/him_
 
-<!--
-**discoliam/discoliam** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+**Discoliam** (Liam Edward Richardson to his parents) is a User Interface Developer 🤓 currently based in Bristol, UK 🇬🇧. For 10 years he has built award-winning Websites, Applications, and Installations for clients around the globe 🌎.
 
-Here are some ideas to get you started:
+He is passionate about Front End Dev, Performance and A11y.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+### Get in touch
+
+- ✉️ hello@discoliam.com
+- 🐦 [@discoliam](https://twitter.com/discoliam/)
+- 📷 [@discoliam](https://www.instagram.com/discoliam/)
+- 📄 [liamrichardson](https://www.linkedin.com/in/liamrichardson/)
+- 🥁 [discoliam](https://www.last.fm/user/discoliam)
+- 🍿 [Letterboxd](https://letterboxd.com/discoliam/)
+- 💿 [Discogs](https://www.discogs.com/user/discoliam)
